@@ -1,8 +1,6 @@
 # gravizool
 
-Small [gravizo.com](http://gravizo.com) tool for encoding and decoding GitHub Markdown files based on the new [GitHub Flavored Markdown Spec](https://github.github.com/gfm/#link-destination).
-
-Makes it possible to use and view UML diagrams in pull requests for architectural reviews, library/module documentation etc.
+Small [Gravizo](http://gravizo.com) tool for encoding and decoding GitHub Markdown files based on the new [GitHub Flavored Markdown Spec](https://github.github.com/gfm/#link-destination). Makes it possible to use and view UML diagrams in pull requests for architectural reviews, library/module documentation etc.
 
 ### Usage
 
@@ -16,12 +14,12 @@ Usage of ./gravizool:
     	Encode the given GitHub Markdown file
 ```
 
-Typical workflow:
+Workflow:
 
 * Decode the Markdown file: ```gravizool -d README.md```
-*  Change the Markdown file (e.g. the [Atom](http://atom.io) editor supports interactive Markdown rendering)
+*  Change the Markdown file (e.g. [Atom](http://atom.io) supports on the fly Markdown rendering)
 * Encode the Markdown file again: ```gravizool -e README.md```
-* Push to GitHub
+* Commit to GitHub
 
 ### Limitations
 
