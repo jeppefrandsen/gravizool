@@ -23,5 +23,4 @@ Workflow:
 
 ### Limitations
 
-* Currently only works with SVG (searches for ```https://g.gravizo.com/svg```)
-* End of URL must be ```enduml)``` (no newline, semicolon etc.)
+* Currently only works with SVG (searches for ```https://g.gravizo.com/svg?```)
