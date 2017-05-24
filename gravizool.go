@@ -10,8 +10,6 @@ import (
 
 const gravizoBegin string = "(http://g.gravizo.com/svg?"
 
-//const gravizoEnd string = "enduml)"
-
 var encoder = strings.NewReplacer(";", "%3B", " ", "%20", "\n", "%0A", "@", "%40",
 	"(", "%28", ")", "%29", "*", "%2A", "\\", "%5C")
 var decoder = strings.NewReplacer("%3B", ";", "%20", " ", "%0A", "\n", "%40", "@",
