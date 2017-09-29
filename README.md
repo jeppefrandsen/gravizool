@@ -9,9 +9,9 @@ $ ./gravizool -h
 Usage of ./gravizool:
   -b	Backup GitHub Markdown file before encode/decode (default true)
   -d string
-    	Decode the given GitHub Markdown file
+    	Decode the GitHub Markdown file
   -e string
-    	Encode the given GitHub Markdown file
+    	Encode the GitHub Markdown file
   -f string
     	Fix the GitHub Markdown file
 ```
