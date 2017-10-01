@@ -7,7 +7,7 @@ Small [Gravizo](http://gravizo.com) tool for encoding and decoding GitHub Markdo
 ```
 $ ./gravizool -h
 Usage of ./gravizool:
-  -b	Backup GitHub Markdown file before encode/decode (default true)
+  -b	Backup the GitHub Markdown file (default true)
   -d string
     	Decode the GitHub Markdown file
   -e string
@@ -24,8 +24,8 @@ Workflow:
 * Encode the Markdown file again: `gravizool -e README.md`
 * Commit to GitHub
 
-README.md files can be viewed in pull requests by pressing the *View* button under the *Files changed* tab)
+README.md files can be viewed in pull requests by pressing the *View* button under the *Files changed* tab.
 
 ### Limitations
 
-* Currently only works with SVG (searches for `https://g.gravizo.com/svg?`)
+* Currently only works with SVG (searches for `https://g.gravizo.com/svg?` and `enduml`)

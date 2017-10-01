@@ -55,7 +55,7 @@ func main() {
 	encode := flag.String("e", "", "Encode the GitHub Markdown file")
 	decode := flag.String("d", "", "Decode the GitHub Markdown file")
 	fix := flag.String("f", "", "Fix the GitHub Markdown file")
-	backup := flag.Bool("b", true, "Backup GitHub Markdown file before encode/decode")
+	backup := flag.Bool("b", true, "Backup the GitHub Markdown file")
 
 	flag.Parse()
 
