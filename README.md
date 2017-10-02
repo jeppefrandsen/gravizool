@@ -14,6 +14,7 @@ Usage of ./gravizool:
     	Encode the GitHub Markdown file
   -f string
     	Fix the GitHub Markdown file
+  -v	Print the program version
 ```
 
 Workflow:
@@ -28,4 +29,4 @@ README.md files can be viewed in pull requests by pressing the *View* button und
 
 ### Limitations
 
-* Currently only works with SVG (searches for `https://g.gravizo.com/svg?` and `enduml`)
+* Currently only works with SVG (searches for `g.gravizo.com/svg?` and `enduml`)

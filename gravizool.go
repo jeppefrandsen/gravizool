@@ -8,15 +8,17 @@ import (
 	"strings"
 )
 
-const gravizoBegin string = "http://g.gravizo.com/svg?"
+const gravizoolVersion = "1.0.1"
+
+const gravizoBegin string = "g.gravizo.com/svg?"
 const gravizoEnd string = "enduml"
 
 var gravizoEncode = strings.NewReplacer(";", "%3B", " ", "%20", "\n", "%0A", "@", "%40",
 	"(", "%28", ")", "%29", "*", "%2A", "\\", "%5C")
 var gravizoDecode = strings.NewReplacer("%3B", ";", "%20", " ", "%0A", "\n", "%40", "@",
 	"%2A", "*", "%5C", "\\")
-var removeSemicolons = strings.NewReplacer(";", "")
-var addSemicolons = strings.NewReplacer("\n", ";\n")
+var gravizoFixEncode = strings.NewReplacer("\n", ";\n", "*", "\\*", "(", "%28", ")", "%29")
+var gravizoFixDecode = strings.NewReplacer(";", "", "\\*", "*")
 
 func check(err error) {
 	if err != nil {
@@ -56,6 +58,7 @@ func main() {
 	decode := flag.String("d", "", "Decode the GitHub Markdown file")
 	fix := flag.String("f", "", "Fix the GitHub Markdown file")
 	backup := flag.Bool("b", true, "Backup the GitHub Markdown file")
+	version := flag.Bool("v", false, "Print the program version")
 
 	flag.Parse()
 
@@ -64,7 +67,10 @@ func main() {
 	} else if len(*decode) > 0 {
 		convert(*decode, gravizoDecode, *backup)
 	} else if len(*fix) > 0 {
-		convert(*fix, removeSemicolons, *backup)
-		convert(*fix, addSemicolons, *backup)
+		convert(*fix, gravizoFixDecode, *backup)
+		convert(*fix, gravizoFixEncode, *backup)
+	} else if *version {
+		fmt.Println(gravizoolVersion)
+		os.Exit(0)
 	}
 }
