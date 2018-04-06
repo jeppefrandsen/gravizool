@@ -56,6 +56,7 @@ class FooBar {;
 ```
 
 Before uploading the README.md to GitHub it needs to be encoded with the gravizool encode (-e) option which will convert the example to:
+
 ```
 ![](https://g.gravizo.com/svg?%3B%0A%40startuml%3B%0Aclass%20FooBar%20{%3B%0A%20%20String%20foo%3B%0A%20%20void%20bar%28%29%3B%0A}%3B%0A%40enduml)
 ```
