@@ -67,4 +67,4 @@ The example will now be rendered on GitHub and can be seen directly in e.g. the 
 
 ### Limitations
 
-* Currently only works with SVG (searches for `g.gravizo.com/svg?` and `enduml`)
+* Currently only works with SVG (searches for `.gravizo.com/svg?` and `enduml`)
