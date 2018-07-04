@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-const gravizoolVersion = "1.0.3"
+const gravizoolVersion = "1.0.4"
 
 const gravizoBegin string = ".gravizo.com/svg?"
 const gravizoEnd string = "enduml"
