@@ -10,7 +10,7 @@ import (
 
 const gravizoolVersion = "1.0.3"
 
-const gravizoBegin string = "g.gravizo.com/svg?"
+const gravizoBegin string = ".gravizo.com/svg?"
 const gravizoEnd string = "enduml"
 
 var gravizoEncode = strings.NewReplacer(";", "%3B", " ", "%20", "\n", "%0A", "@", "%40",
