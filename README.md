@@ -40,8 +40,7 @@ class FooBar {
   String foo
   void bar()
 }
-@enduml
-'>
+@enduml'>
 ```
 
 To fix these issues use the gravizool fix (-f) option which will convert the example to the following and make it render:
@@ -53,21 +52,18 @@ class FooBar {;
   String foo;
   void bar();
 };
-@enduml
-'>
+@enduml'>
 ```
 
 Before uploading the README.md to GitHub it needs to be encoded with the gravizool encode (-e) option which will convert the example to:
 
 ```
-<img src='https://g.gravizo.com/svg?%3B%0A%40startuml%3B%0Aclass%20FooBar%20{%3B%0A%20%20String%20foo%3B%0A%20%20void%20bar%28%29%3B%0A}%3B%0A%40enduml
-'>
+<img src='https://g.gravizo.com/svg?%3B%0A%40startuml%3B%0Aclass%20FooBar%20{%3B%0A%20%20String%20foo%3B%0A%20%20void%20bar%28%29%3B%0A}%3B%0A%40enduml'>
 ```
 
 The example will now be rendered on GitHub and can be seen directly in e.g. the pull request:
 
-<img src='https://g.gravizo.com/svg?%3B%0A%40startuml%3B%0Aclass%20FooBar%20{%3B%0A%20%20String%20foo%3B%0A%20%20void%20bar%28%29%3B%0A}%3B%0A%40enduml
-'>
+<img src='https://g.gravizo.com/svg?%3B%0A%40startuml%3B%0Aclass%20FooBar%20{%3B%0A%20%20String%20foo%3B%0A%20%20void%20bar%28%29%3B%0A}%3B%0A%40enduml'>
 
 ### Limitations
 
