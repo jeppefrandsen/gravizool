@@ -22,7 +22,7 @@ Usage of ./gravizool:
 ### Workflow
 
 * Decode the Markdown file: `gravizool -d README.md`
-* Change the Markdown file. The [Atom](http://atom.io) editor supports on the fly Markdown rendering (right click on the file and select "Markdown Preview")
+* Change the Markdown file. Both [VS Code](https://code.visualstudio.com) and [Atom](http://atom.io) editor supports on the fly Markdown rendering (right click on the file and select "Markdown Preview")
 * Fix the Markdown file in case of rendering issues: `gravizool -f README.md`
 * Encode the Markdown file again: `gravizool -e README.md`
 * Commit to GitHub
@@ -34,36 +34,40 @@ README.md files can be viewed in pull requests by pressing the "View" button und
 If we add the [Gravizo](http://gravizo.com) example below using [plantuml](http://plantuml.com) syntax to a README.md it will not render in e.g. [Atom](http://atom.io) due to [Gravizo incompatibilities](http://www.gravizo.com/#incompatibilities):
 
 ```
-![](https://g.gravizo.com/svg?
+<img src='https://g.gravizo.com/svg?
 @startuml
 class FooBar {
   String foo
   void bar()
 }
-@enduml)
+@enduml
+'>
 ```
 
-To fix these issues use the gravizool fix (-f) option which will convert the example to the following and make it render in e.g. [Atom](http://atom.io):
+To fix these issues use the gravizool fix (-f) option which will convert the example to the following and make it render:
 
 ```
-![](https://g.gravizo.com/svg?;
+<img src='https://g.gravizo.com/svg?;
 @startuml;
 class FooBar {;
   String foo;
-  void bar%28%29;
+  void bar();
 };
-@enduml)
+@enduml
+'>
 ```
 
 Before uploading the README.md to GitHub it needs to be encoded with the gravizool encode (-e) option which will convert the example to:
 
 ```
-![](https://g.gravizo.com/svg?%3B%0A%40startuml%3B%0Aclass%20FooBar%20{%3B%0A%20%20String%20foo%3B%0A%20%20void%20bar%28%29%3B%0A}%3B%0A%40enduml)
+<img src='https://g.gravizo.com/svg?%3B%0A%40startuml%3B%0Aclass%20FooBar%20{%3B%0A%20%20String%20foo%3B%0A%20%20void%20bar%28%29%3B%0A}%3B%0A%40enduml
+'>
 ```
 
 The example will now be rendered on GitHub and can be seen directly in e.g. the pull request:
 
-![](https://g.gravizo.com/svg?%3B%0A%40startuml%3B%0Aclass%20FooBar%20{%3B%0A%20%20String%20foo%3B%0A%20%20void%20bar%28%29%3B%0A}%3B%0A%40enduml)
+<img src='https://g.gravizo.com/svg?%3B%0A%40startuml%3B%0Aclass%20FooBar%20{%3B%0A%20%20String%20foo%3B%0A%20%20void%20bar%28%29%3B%0A}%3B%0A%40enduml
+'>
 
 ### Limitations
 

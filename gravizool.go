@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-const gravizoolVersion = "1.0.4"
+const gravizoolVersion = "1.0.5"
 
 const gravizoBegin string = ".gravizo.com/svg?"
 const gravizoEnd string = "enduml"
@@ -16,8 +16,8 @@ const gravizoEnd string = "enduml"
 var gravizoEncode = strings.NewReplacer(";", "%3B", " ", "%20", "\n", "%0A", "@", "%40",
 	"(", "%28", ")", "%29", "*", "%2A", "\\", "%5C", "<", "%3C", ">", "%3E", "\"", "%22")
 var gravizoDecode = strings.NewReplacer("%3B", ";", "%20", " ", "%0A", "\n", "%40", "@",
-	"%2A", "*", "%5C", "\\")
-var gravizoFixEncode = strings.NewReplacer("\n", ";\n", "(", "%28", ")", "%29", "<", "%3C", ">", "%3E")
+	"%28", "(", "%29", ")", "%2A", "*", "%5C", "\\", "%3C", "<", "%3E", ">", "%22", "\"")
+var gravizoFixEncode = strings.NewReplacer("\n", ";\n")
 var gravizoFixDecode = strings.NewReplacer(";", "")
 
 func check(err error) {
